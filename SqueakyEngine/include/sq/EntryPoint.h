@@ -1,10 +1,6 @@
 
 #ifndef ENTRYPOINT_H
 #define ENTRYPOINT_H
-#include <spdlog/fmt/fmt.h>
-#include <spdlog/fmt/bundled/colors.h>
-#include <spdlog/fmt/bundled/core.h>
-#include <iostream>
 
 extern sq::Application* sq::CreateApplication();
 
