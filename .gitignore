@@ -2,3 +2,5 @@
 
 build/
 .vscode/
+.clang-format
+.gitignore
