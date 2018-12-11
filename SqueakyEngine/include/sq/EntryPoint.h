@@ -11,6 +11,7 @@ int main(int argc, char const *argv[])
    
     // fmt::print(fmt::color::green_yellow, "Running Squeaky Engine\n");
     // fmt::print("hello world {}","world\n");
+    
     sq::Logger::init();
     CORE_WARN("initilzied LOG");
     CORE_INFO("INFO HERE");
