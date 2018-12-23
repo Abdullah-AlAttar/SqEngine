@@ -13,6 +13,7 @@ sources = [src_prfx + 'Application.cpp',
 shlib = shared_library('squeakyengine',
   sources : sources,
   cpp_args : lib_args,
+  cpp_pch : ['pch/sq.pch.h'],
   include_directories : [ includes, include_directories('./include/sq')]
 )
 

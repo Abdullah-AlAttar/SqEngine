@@ -3,9 +3,6 @@
 
 #include "sq/Core.h"
 
-#include <functional>
-#include <string>
-
 namespace sq
 {
 
