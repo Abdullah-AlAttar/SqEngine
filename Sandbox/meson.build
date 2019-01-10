@@ -9,4 +9,4 @@ exe = executable('Sandbox',
            include_directories : includes,
            cpp_args : ['-DFMT_HEADER_ONLY'])
 
-benchmark( 'Sandbox benchmark', exe)
+benchmark('Sandbox benchmark', exe)

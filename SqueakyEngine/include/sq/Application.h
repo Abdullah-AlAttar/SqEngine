@@ -1,6 +1,7 @@
 
 #ifndef APPLICATION_H
 #define APPLICATION_H
+#include <sq/Window.h>
 
 namespace sq
 {
@@ -17,6 +18,8 @@ public:
     void run();
 
 private:
+    std::unique_ptr<Window> m_window;
+    bool m_running = true;
 };
 
 // client side function

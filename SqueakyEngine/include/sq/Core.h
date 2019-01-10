@@ -1,8 +1,6 @@
 
-#ifndef SQ_PCH_H
-#define SQ_PCH_H
-
-
+#ifndef CORE_H
+#define CORE_H
 #include <iostream>
 #include <memory>
 #include <functional>
@@ -13,5 +11,9 @@
 #include <sstream> 
 #include <utility>
 #include <assert.h>
+namespace sq
+{
+#define BIT(x) (1 << x)
 
+} // namespace sq
 #endif

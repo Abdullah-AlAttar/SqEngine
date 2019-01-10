@@ -8,12 +8,16 @@ lib_args = ['-DBUILDING_SQUEAKYENGINE']
 
 src_prfx = './src/sq/'
 sources = [src_prfx + 'Application.cpp',
-           src_prfx + 'Logger.cpp']
+           src_prfx + 'Logger.cpp',
+           src_prfx + 'platform/linux/LinuxWindow.cpp']
+cmplr = meson.get_compiler('cpp')
+deps = [cmplr.find_library('glfw')]
 
 shlib = shared_library('squeakyengine',
   sources : sources,
+  dependencies : deps,
   cpp_args : lib_args,
-  cpp_pch : ['pch/sq.pch.h'],
+  # cpp_pch : ['pch/sq.pch.h'],
   include_directories : [ includes, include_directories('./include/sq')]
 )
 
@@ -23,4 +27,5 @@ shlib = shared_library('squeakyengine',
 
 # Make this library usable as a Meson subproject.
 squeakyengine_dep = declare_dependency(
+  dependencies : deps,
   link_with : shlib)

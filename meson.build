@@ -6,5 +6,7 @@ project('Squeaky', 'cpp',
 includes = [include_directories('./SqueakyEngine/include'),
             include_directories('./SqueakyEngine/src'),
             include_directories('./external/spdlog')]
+
+
 subdir('SqueakyEngine')
 subdir('Sandbox')
