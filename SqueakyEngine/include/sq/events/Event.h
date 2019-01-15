@@ -66,8 +66,7 @@ public:
         return GetCategoryFlags() & category;
     }
 
-protected:
-    bool m_Handled = false;
+    bool m_handled = false;
 };
 
 class EventDispatcher
@@ -83,7 +82,7 @@ public:
     {
         if (m_Event.GetEventType() == T::GetStaticType())
         {
-            m_Event.m_Handled = func(*(T*)&m_Event);
+            m_Event.m_handled = func(*(T*)&m_Event);
             return true;
         }
         return false;
