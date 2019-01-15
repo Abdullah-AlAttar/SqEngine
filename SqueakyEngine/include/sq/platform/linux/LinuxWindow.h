@@ -1,7 +1,7 @@
 #ifndef LINUX_WINDOW_H
 #define LINUX_WINDOW_H
 
-#include "Window.h"
+#include "sq/Window.h"
 #include <GLFW/glfw3.h>
 namespace sq
 {

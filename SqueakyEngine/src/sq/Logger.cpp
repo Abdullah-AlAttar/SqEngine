@@ -1,4 +1,4 @@
-#include "Logger.h"
+#include "sq/Logger.h"
 
 namespace sq
 {

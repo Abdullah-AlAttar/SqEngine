@@ -22,7 +22,7 @@ shlib = shared_library('squeakyengine',
   dependencies : deps,
   cpp_args : lib_args,
   # cpp_pch : ['pch/sq.pch.h'],
-  include_directories : [ includes, include_directories('./include/sq')]
+  include_directories : [includes]
 )
 
 # test_exe = executable('squeakyengine', 'squeakyengine_test.cpp',

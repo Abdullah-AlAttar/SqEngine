@@ -1,4 +1,4 @@
-#include "Application.h"
+#include "sq/Application.h"
 #include "sq/Logger.h"
 #include "sq/events/ApplicationEvent.h"
 
