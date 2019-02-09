@@ -1,7 +1,7 @@
 #include "sq/Application.h"
 #include "sq/Logger.h"
 #include "sq/events/ApplicationEvent.h"
-
+#include "glad/glad.h"
 #include <GLFW/glfw3.h>
 namespace sq
 {
@@ -10,6 +10,8 @@ Application::Application()
 {
     m_window = std::unique_ptr<Window>(Window::Create());
     m_window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+    unsigned int id;
+    glGenVertexArrays(1, &id);
 }
 void Application::run()
 {
@@ -28,7 +30,7 @@ void Application::OnEvent(Event& e)
 {
     EventDispatcher dispatcher(e);
     dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-
+    // CORE_INFO("{}",e.GetName());
     for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
     {
         (*--it)->OnEvent(e);

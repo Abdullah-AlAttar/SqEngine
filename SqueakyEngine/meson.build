@@ -12,10 +12,13 @@ sources = [src_prfx + 'Application.cpp',
            src_prfx + 'Layer.cpp',
            src_prfx + 'LayerStack.cpp',
            src_prfx + 'platform/linux/LinuxWindow.cpp']
+           
 cmplr = meson.get_compiler('cpp')
 deps = [cmplr.find_library('glfw'),
         cmplr.find_library('GL'),
-        cmplr.find_library('GLU')]
+        cmplr.find_library('GLU'),
+         cmplr.find_library('dl'),
+        glad_dep]
 
 shlib = shared_library('squeakyengine',
   sources : sources,

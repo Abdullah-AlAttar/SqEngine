@@ -2,6 +2,7 @@
 #define LINUX_WINDOW_H
 
 #include "sq/Window.h"
+#include "glad/glad.h"
 #include <GLFW/glfw3.h>
 namespace sq
 {

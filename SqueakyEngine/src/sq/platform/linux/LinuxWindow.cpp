@@ -3,6 +3,7 @@
 #include "sq/events/MouseEvent.h"
 #include "sq/events/KeyEvent.h"
 #include "sq/events/ApplicationEvent.h"
+
 namespace sq
 {
 
@@ -43,6 +44,12 @@ void LinuxWindow::Init(const WindowProps& props)
                                 nullptr,
                                 nullptr);
     glfwMakeContextCurrent(m_Window);
+    int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    if( not status)
+    {
+        CORE_ERROR("Error loading glad");
+    } 
+    CORE_INFO("OpenGL Version {}.{}", GLVersion.major, GLVersion.minor);
     glfwSetWindowUserPointer(m_Window, &m_Data);
     SetVSync(true);
 
